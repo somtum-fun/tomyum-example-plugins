@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(TomYumAbstractions)" />
+    <ProjectReference Include="../../build/ScoreInspector/TomYum.Examples.ScoreInspector.csproj" />
+    <ProjectReference Include="../../build/PpCap/TomYum.Examples.PpCap.csproj" />
+    <ProjectReference Include="../../build/ReplayCheck/TomYum.Examples.ReplayCheck.csproj" />
+  </ItemGroup>
+</Project>

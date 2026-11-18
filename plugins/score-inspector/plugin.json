@@ -1,0 +1,8 @@
+{
+  "id": "tomyum.example.score-inspector",
+  "name": "Score inspector (example)",
+  "version": "0.1.0",
+  "authors": "Phapoom Saksri",
+  "description": "!recent and !score for staff: a player's last plays, and one play read from its replay.",
+  "entryPoint": "ScoreInspectorPlugin"
+}

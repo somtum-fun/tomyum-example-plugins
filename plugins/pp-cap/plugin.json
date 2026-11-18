@@ -1,0 +1,8 @@
+{
+  "id": "tomyum.example.pp-cap",
+  "name": "pp cap (example)",
+  "version": "0.1.0",
+  "authors": "Phapoom Saksri",
+  "description": "Tells staff (or restricts, if set to) when a play goes over a per-mode pp cap; whitelisted players and staff are left alone.",
+  "entryPoint": "PpCapPlugin"
+}

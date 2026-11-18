@@ -1,0 +1,8 @@
+{
+  "id": "tomyum.example.replay-check",
+  "name": "Replay check (example)",
+  "version": "0.1.0",
+  "authors": "Phapoom Saksri",
+  "description": "Checks new plays' replays: copied replays here, and anything else in an outside analyzer (e.g. circleguard). Only tells staff.",
+  "entryPoint": "ReplayCheckPlugin"
+}

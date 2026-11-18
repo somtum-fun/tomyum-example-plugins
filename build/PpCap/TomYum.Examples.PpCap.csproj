@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The pp-cap plugin as a compiled .dll (build/PpCap/bin/Release/net10.0/TomYum.Examples.PpCap.dll). The same source also
+       works as loose source: copy plugins/pp-cap/ into the server's plugins/ folder instead. -->
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <RootNamespace>TomYum.Examples.PpCap</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../plugins/pp-cap/*.cs" />
+    <InternalsVisibleTo Include="TomYum.Examples.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Private=false: the server already has these assemblies (Abstractions brings Domain); a second copy next to
+         the plugin would break type identity, so neither is copied to the output. -->
+    <ProjectReference Include="$(TomYumAbstractions)" Private="false" />
+    <ProjectReference Include="$(TomYumDomain)" Private="false" />
+  </ItemGroup>
+</Project>

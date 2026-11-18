@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The replay-check plugin as a compiled .dll (build/ReplayCheck/bin/Release/net10.0/TomYum.Examples.ReplayCheck.dll). The same source also
+       works as loose source: copy plugins/replay-check/ into the server's plugins/ folder instead. -->
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <RootNamespace>TomYum.Examples.ReplayCheck</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../plugins/replay-check/*.cs" />
+    <InternalsVisibleTo Include="TomYum.Examples.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Private=false: the server already has these assemblies (Abstractions brings Domain); a second copy next to
+         the plugin would break type identity, so neither is copied to the output. -->
+    <ProjectReference Include="$(TomYumAbstractions)" Private="false" />
+    <ProjectReference Include="$(TomYumDomain)" Private="false" />
+  </ItemGroup>
+</Project>
